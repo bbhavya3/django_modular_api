@@ -4,30 +4,18 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
+
 schema_view = get_schema_view(
     openapi.Info(
         title="Modular Vendor Product Course Certification API",
         default_version='v1',
-        description="""
-This API system manages Vendors, Products, Courses and Certifications.
-
-Modules:
-• Vendor Management
-• Product Management
-• Course Management
-• Certification Management
-
-Relationships:
-Vendor → Product → Course → Certification
-
-Developed using Django REST Framework.
-""",
+        description="Backend API for managing Vendors, Products, Courses and Certifications",
         contact=openapi.Contact(email="2400032796cse4@gmail.com"),
-        license=openapi.License(name="MIT License"),
     ),
     public=True,
     permission_classes=(permissions.AllowAny,),
 )
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
