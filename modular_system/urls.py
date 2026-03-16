@@ -3,6 +3,11 @@ from django.urls import path, include
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from django.http import HttpResponse
+
+
+def home(request):
+    return HttpResponse("Modular Vendor Product Course Certification API is running")
 
 
 schema_view = get_schema_view(
@@ -17,6 +22,8 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    path('', home),
+
     path('admin/', admin.site.urls),
 
     path('api/vendors/', include('vendor.urls')),
