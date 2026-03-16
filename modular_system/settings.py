@@ -125,3 +125,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ]
 }
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,
+} 
