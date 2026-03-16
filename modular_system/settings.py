@@ -35,6 +35,10 @@ INSTALLED_APPS = [
     'product',
     'course',
     'certification',
+
+    'vendor_product',
+    'product_course',
+    'course_certification',
 ]
 
 

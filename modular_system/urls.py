@@ -33,6 +33,10 @@ urlpatterns = [
     path('api/courses/', include('course.urls')),
     path('api/certifications/', include('certification.urls')),
 
+    path('api/vendor-products/', include('vendor_product.urls')),
+    path('api/product-courses/', include('product_course.urls')),
+    path('api/course-certifications/', include('course_certification.urls')),
+
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]
